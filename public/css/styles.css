@@ -1,0 +1,263 @@
+body{
+  background-image: url('../images/fondo.jpg');
+  background-color: red;
+  background-position: top;
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+}
+
+.faq{
+  /*background-color: #aaa;*/
+  background-color: rgba(255,255,255,0.75);
+  padding: 20px;
+  /*border: 0 solid white;*/
+  border-radius: 5px;
+}
+
+h1{
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+h3{
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+}
+
+.thank h4{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+
+.thank h4 a{
+  font-size: 20px;
+}
+
+p{
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.form-horizontal{
+  background: rgba(255,255,255,0.75);
+  padding: 10px;
+  border-radius: 5px;
+  color:black;
+}
+
+.password{
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+.terms{
+  text-align: right;
+}
+
+.header, .header a{
+  background-image: url(../images/oldies.png);
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Lobster',cursive;
+  font-size: 50px;
+  color: red;
+  /*text-shadow: 0 0 2px rgba(0,0,0,0.25), 0 0 2px rgba(0,0,0,0.25);*/
+}
+
+.navigator{
+  background: rgba(255,255,255,0.75);
+  margin: 0 auto;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.nav li a{
+  color: black;
+}
+
+.section{
+  background: rgba(255,255,255,0.75);
+  padding: 10px;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.section img{
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.userHeader{
+  text-align: right;
+  color: white;
+  font-size: 20px;
+}
+
+.userHeader a{
+  text-align: right;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  color: #1E90FF;
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+}
+
+.login{
+  text-align: right;
+  margin-bottom: 10px;
+  color: #ED9066;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+}
+
+.login a{
+  text-align: right;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  color: #fd8853;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+}
+
+.login a:link,.login a:visited,.login a:hover,.login a:active{
+  color: #fd8853;
+}
+
+.login p{
+  text-align: right;
+  font-family: 'Lobster', cursive;
+  color: black;
+  font-size: 15px;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.footer{
+  text-align: left;
+  color: white;
+}
+
+.footer a{
+  text-align: right;
+  float:right;
+  font-family: 'Lobster', cursive;
+  font-size: 17px;
+}
+
+.footer a:link,.footer a:visited,.footer a:hover,.footer a:active{
+  color: white;
+  }
+
+.LogInFooter{
+  text-align: right;
+  padding-right: 30px;
+}
+
+.LogInFooter h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 14px;
+}
+
+.LogInFooter a{
+  color: #337ab7;
+  font-family: 'Lobster', cursive;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.LogInFooter a:link,.LogInFooter a:visited,.LogInFooter a:hover,.LogInFooter a:active{
+  /*color: #337ab7;*/
+}
+
+/*.img-thumbnail{*/
+  /*margin-top:10px;*/
+  /*width: 100%;
+  height: 100%;
+  background-color: white;*/
+  /*border: 5px solid black;*/
+  /*border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;*/
+/*}*/
+
+.visible{
+  display: none;
+}
+span{
+  color: red;
+}
+
+#registrado{
+  /*display: none;*/
+}
+
+h4{
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+/*.item p{
+  background-color: white;
+  background-color: black;
+  padding: 0 10px;
+  border: 5px solid black;
+  border-radius: 4px;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+}*/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container p, .form-group,button, label,a{
+    font-size: 15px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width:992px) {
+  .container h1{
+    font-size: 30px;
+  }
+
+  .container h3{
+    font-size: 20px;
+  }
+
+  .container p, .form-group,button, label, .form-control,a{
+    font-size: 17px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container h1{
+    font-size: 40px;
+  }
+
+  .container h3{
+    font-size: 30px;
+  }
+
+  .container .form-group, button, label,a, input{
+    font-size: 15px;
+  }
+
+  .container p, .btn-default{
+    font-size: 17px;
+  }
+}
