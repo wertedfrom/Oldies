@@ -1,5 +1,5 @@
 body{
-  background-image: url('../images/fondo.jpg');
+  background-image: url(../images/fondo.jpg);
   background-color: red;
   background-position: top;
   background-size: cover;
