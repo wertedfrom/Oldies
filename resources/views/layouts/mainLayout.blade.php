@@ -12,9 +12,10 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 
     <!-- styles -->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href={{url("css/normalize.css")}} media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href={{url("css/styles.css")}} media="screen" title="no title" charset="utf-8">
+    <script src={{url("./js/faq.js")}} charset="utf-8"></script>
 
 {{--<style>--}}
 {{--</style>--}}
@@ -24,10 +25,12 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="staticbg"></div>
+{{--<div class="staticbg"></div>--}}
 <div class="container-fluid">
     @include('header')
     @yield('content')
+    {{--@include('footer')--}}
+    @include('footer')
 </div>
 </body>
 </html>

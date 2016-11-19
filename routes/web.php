@@ -15,9 +15,11 @@
 //    return view('welcome');
 //});
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
+
+Route::get('/', 'PublicationController@showBestPublications');
 
 Route::get('/login', function () {
     return view('login');
@@ -25,3 +27,16 @@ Route::get('/login', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+//Route::get('/category', function (){
+//    return view('category');
+//});
+
+Route::get('/category/{id}', 'CategorieController@listByCategory');
+
+Route::get('/publication/{id}', 'PublicationController@showPublication');
+
+Route::get('/faq', function () {
+    return view('faq');
+});
+

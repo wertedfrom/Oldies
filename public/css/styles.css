@@ -1,10 +1,18 @@
 body{
   /*background-image: url(../images/fondo.jpg);*/
-  background-color: white;
+  /*background-color: WhiteSmoke;*/
   background-position: top;
   background-size: cover;
   background-repeat: repeat-y;
   background-attachment: fixed;
+}
+
+.minimo{
+  min-height: 500px;
+}
+
+.minimo-pub{
+  min-height: 450px;
 }
 
 .faq{
@@ -80,14 +88,20 @@ p{
 
 .nav li a{
   color: black;
+  font-size: 20px;
+  padding: 0;
+}
+
+.nav li a:focus, .nav li a:hover  {
+  background-color: transparent;
 }
 
 .section{
   background: rgba(255,255,255,0.75);
   padding: 10px;
   border-radius: 5px;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  /*border-top-right-radius: 0;*/
+  /*border-top-left-radius: 0;*/
 }
 
 .section img{
@@ -147,7 +161,7 @@ p{
 
 .footer{
   text-align: left;
-  color: white;
+  color: black;
 }
 
 .footer a{
@@ -155,10 +169,11 @@ p{
   float:right;
   font-family: 'Lobster', cursive;
   font-size: 17px;
+  color: inherit;
 }
 
 .footer a:link,.footer a:visited,.footer a:hover,.footer a:active{
-  color: white;
+  /*color: white;*/
   }
 
 .LogInFooter{
@@ -196,9 +211,10 @@ p{
 .visible{
   display: none;
 }
-span{
-  color: red;
-}
+
+/*span{*/
+  /*color: red;*/
+/*}*/
 
 #registrado{
   /*display: none;*/

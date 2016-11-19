@@ -1,7 +1,7 @@
 @extends('layouts.mainLayout')
 
 @section('content')
-    <div class="row">
+    <div class="row minimo">
         <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
             <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                 {{ csrf_field() }}
@@ -57,7 +57,6 @@
                     </div>
                 </div>
             </form>
-            @include('footer')
         </div>
     </div>
 @endsection

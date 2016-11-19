@@ -2,19 +2,18 @@
     <div class="header col-md-10 col-md-offset-1">
         <div class="col-md-2">
             {{--<a style="color: rgba(212,99,99,.93)" href="index.php">Oldie's</a>--}}
-            <a class="logo" href="index.php">Oldie's</a>
+            <a class="logo" href="/">Oldie's</a>
         </div>
         <div class="login col-md-5 col-md-offset-5">
             <div class="row">
                 <div class="text-right">
-                    <a href="index.php">Home</a> |
                     @if (Auth::guest())
                         <a href="/login">Login</a> |
                         <a href="/register">Register</a>
                     @else
                         {{--<div class="dropdown">--}}
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->name }}
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  {{ Auth::user()->name }}
                         </a> |
                         <a href="{{ url('/logout') }}"
                            onclick="event.preventDefault();
@@ -29,9 +28,9 @@
                     @endif
                 </div>
             </div>
-            @if(Route::current()->getName() != 'login')
+{{--            @if(Route::current()->getName() !== 'login')--}}
                 <div class="row">
-                    <div class="searcher">
+                    <div class="searcher" style="margin-top: 5px;">
                         <form id="searcher" action="/search" method="POST">
                             <div class="input-group">
                                 {{ csrf_field() }}
@@ -44,7 +43,7 @@
 
                     </div>
                 </div>
-            @endif
+            {{--@endif--}}
         </div>
     </div>
 </div>

@@ -1,46 +1,47 @@
 <?php
-$productos=[];
-$productos[]=[
-        'url_image' => "./images/bici.jpg",
-        'title' => "bici",
-        'alt' => "bici",
-        'desc'  => "una bici",
-        'price' => "$ 5.00",
-];
-$productos[]=[
-        'url_image' => "./images/camara.jpg",
-        'title' => "camara",
-        'alt' => "camara",
-        'desc'  => "una camara",
-        'price' => "$ 5.00",
-];
-$productos[]=[
-        'url_image' => "./images/camion.jpg",
-        'title' => "camion",
-        'alt' => "camion",
-        'desc'  => "un camion",
-        'price' => "$ 5.00",
-];
-$productos[]=[
-        'url_image' => "./images/coser.jpg",
-        'title' => "maquina de coser",
-        'alt' => "maquina_coser",
-        'desc'  => "una maquina de coser",
-        'price' => "$ 5.00",
-];
-$productos[]=[
-        'url_image' => "./images/toca discos.jpg",
-        'title' => "toca discos",
-        'alt' => "Toca_discos",
-        'desc'  => "un toca discos",
-        'price' => "$ 5.00",
-];
+//$productos=[];
+//$productos[]=[
+//        'url_image' => "./images/bici.jpg",
+//        'title' => "bici",
+//        'alt' => "bici",
+//        'desc'  => "una bici",
+//        'price' => "$ 5.00",
+//];
+//$productos[]=[
+//        'url_image' => "./images/camara.jpg",
+//        'title' => "camara",
+//        'alt' => "camara",
+//        'desc'  => "una camara",
+//        'price' => "$ 5.00",
+//];
+//$productos[]=[
+//        'url_image' => "./images/camion.jpg",
+//        'title' => "camion",
+//        'alt' => "camion",
+//        'desc'  => "un camion",
+//        'price' => "$ 5.00",
+//];
+//$productos[]=[
+//        'url_image' => "./images/coser.jpg",
+//        'title' => "maquina de coser",
+//        'alt' => "maquina_coser",
+//        'desc'  => "una maquina de coser",
+//        'price' => "$ 5.00",
+//];
+//$productos[]=[
+//        'url_image' => "./images/toca discos.jpg",
+//        'title' => "toca discos",
+//        'alt' => "Toca_discos",
+//        'desc'  => "un toca discos",
+//        'price' => "$ 5.00",
+//];
+//$publications = \App\Publication::all();
 //var_dump($productos);
 ?>
 
 @extends('layouts.mainLayout')
 @section('title')
-    Oldie's Home
+    Oldie's | Home
 @endsection
 @section('content')
     @include('nav-full')
@@ -78,36 +79,19 @@ $productos[]=[
     {{--</div>--}}
     <div class="row">
         <div class="section col-md-10 col-md-offset-1">
-            @foreach($productos as $producto)
+            @foreach($publications as $producto)
                 {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">--}}
                 {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 item">--}}
                 <div class="col-md-3">
-                    <div class="thumbnail">
-                        <img src="{{$producto['url_image']}}" alt={{$producto['alt']}}">
-                    <div class="caption">
-                        <h3>{{$producto['title']}}</h3>
-                        <p>{{$producto['desc']}}</p>
-                        <p>{{$producto['price']}}</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Visitar</a> <a href="#" class="btn btn-default" role="button">Comprar</a></p>
+                    <div class="thumbnail text-center" style="padding-bottom: 10px">
+                        <img src="{{$producto['url_image']}}" alt="{{$producto['title']}}">
+                            <h3>{{$producto['title']}}</h3>
+                            <h4>$ {{$producto['price']}}</h4>
+                            <a href="{{url("/publication/$producto->id")}}" class="btn btn-primary" role="button">Visitar</a>
+                        <a href="{{url("/publication/$producto->id")}}" class="btn btn-default" role="button">Comprar</a>
                     </div>
                 </div>
+            @endforeach
         </div>
-        {{--</div>--}}
-        @endforeach
-        {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 item">--}}
-        {{--<img src="./images/camara.jpg" alt="camara" class="img-responsive img-thumbnail"/>--}}
-        {{--</div>--}}
-        {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 item">--}}
-        {{--<img src="./images/camion.jpg" alt="camion" class="img-responsive img-thumbnail"/>--}}
-        {{--</div>--}}
-        {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 item">--}}
-        {{--<img src="./images/coser.jpg" alt="maquina_coser" class="img-responsive img-thumbnail"/>--}}
-        {{--</div>--}}
-        {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 item">--}}
-        {{--<img src="./images/toca discos.jpg" alt="toca_discos" class="img-responsive img-thumbnail"/>--}}
-        {{--</div>--}}
-
-    </div>
-    @include('footer')
     </div>
 @endsection
