@@ -1,6 +1,6 @@
 body{
-  background-image: url(../images/fondo.jpg);
-  background-color: red;
+  /*background-image: url(../images/fondo.jpg);*/
+  background-color: white;
   background-position: top;
   background-size: cover;
   background-repeat: repeat-y;
@@ -65,7 +65,8 @@ p{
   text-decoration: none;
   font-family: 'Lobster',cursive;
   font-size: 50px;
-  color: red;
+  /*color: red;*/
+  color: black;
   /*text-shadow: 0 0 2px rgba(0,0,0,0.25), 0 0 2px rgba(0,0,0,0.25);*/
 }
 
@@ -114,23 +115,25 @@ p{
 .login{
   text-align: right;
   margin-bottom: 10px;
-  color: #ED9066;
+  /*color: #ED9066;*/
+  color: black;
   font-size: 20px;
-  text-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+  /*text-shadow: 2px 2px 2px rgba(0,0,0,0.75);*/
 }
 
 .login a{
   text-align: right;
   text-decoration: none;
   font-family: 'Lobster', cursive;
-  color: #fd8853;
+  /*color: #fd8853;*/
+  color: black;
   font-size: 20px;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+  /*text-shadow: 2px 2px 2px rgba(0,0,0,0.75);*/
 }
 
 .login a:link,.login a:visited,.login a:hover,.login a:active{
-  color: #fd8853;
+  color: inherit;
 }
 
 .login p{
