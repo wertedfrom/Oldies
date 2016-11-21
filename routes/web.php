@@ -20,6 +20,8 @@
 //});
 
 Route::get('/', 'PublicationController@showBestPublications');
+// -- ruta que busca las publicaciones filtradas por mysql
+Route::get('/searchPublications', 'PublicationController@searchPublications');
 
 Route::get('/login', function () {
     return view('login');
@@ -39,4 +41,3 @@ Route::get('/publication/{id}', 'PublicationController@showPublication');
 Route::get('/faq', function () {
     return view('faq');
 });
-
