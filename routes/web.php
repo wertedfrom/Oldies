@@ -21,11 +21,17 @@
 
 Route::get('/', 'PublicationController@showBestPublications');
 // -- ruta que busca las publicaciones filtradas por mysql
-Route::get('/searchPublications', 'PublicationController@searchPublications');
+
+Route::get('/search', 'PublicationController@searchPublications');
+
+Route::get('/searchResults', function () {
+    return view('searchResults');
+});
 
 Route::get('/login', function () {
     return view('login');
 });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

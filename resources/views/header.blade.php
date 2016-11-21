@@ -31,7 +31,7 @@
 {{--            @if(Route::current()->getName() !== 'login')--}}
                 <div class="row">
                     <div class="searcher" style="margin-top: 5px;">
-                        <form id="searcher" action="/search" method="POST">
+                        <form id="searcher" action="/search" method="GET">
                             <div class="input-group">
                                 {{ csrf_field() }}
                                 <input type="text" class="form-control box-shadow" name="query">

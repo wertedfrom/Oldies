@@ -21,13 +21,14 @@ class PublicationController extends Controller
         $publications = Publication::all()->take(8);
         return view('index',['publications' => $publications]);
     }
+
     // funcion de busqueda de las publicaciones que recibe por el input del buscador
     public function searchPublications(Request $request){
-      $query = Publication::where(
+      $publications = Publication::where(
         'title',
         'LIKE',
-        '%'.$request->input('query'). '%'
+        '%'.$request->input('query').'%'
         )->get();
-        return view('/category',['publications'=> $query]);
+        return view('/searchResults',['publications' => $publications]);
     }
 }
