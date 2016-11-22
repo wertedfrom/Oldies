@@ -27,6 +27,9 @@ Route::get('/search', 'PublicationController@searchPublications');
 Route::get('/searchResults', function () {
     return view('searchResults');
 });
+// -- ruta para agregar una publicaciones
+Route::get('/addPublicationForm', 'PublicationController@addPublicationForm');
+Route::post('publications/add', 'PublicationController@addPublicationRequest');
 
 Route::get('/login', function () {
     return view('login');
