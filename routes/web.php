@@ -28,8 +28,8 @@ Route::get('/searchResults', function () {
     return view('searchResults');
 });
 // -- ruta para agregar una publicaciones
-Route::get('/addPublicationForm', 'PublicationController@addPublicationForm');
-Route::post('publications/add', 'PublicationController@addPublicationRequest');
+Route::get('/publications/add', 'PublicationController@add');
+Route::post('publications/store', 'PublicationController@store');
 
 Route::get('/login', function () {
     return view('login');

@@ -32,28 +32,42 @@ class PublicationController extends Controller
         )->get();
         return view('/searchResults',['publications' => $publications]);
     }
-    // funcion para agregar una publicaciones
-    public function addPublicationForm(){
-      $categories = Categorie::all();
 
+    // funcion para agregar una publicaciones
+    public function add(){
+      $categories = Categorie::all();
       return view('/addPublication' , ['categories'=> $categories]);
     }
+
     // funcion que agrega la pelicula a la base de datos pasando por el validador personalizado
-    public function addPublicationRequest(Request $request){
+    public function store(Request $request)
+    {
+        var_dump($request->input());
+        $publication = Publication::create([
+            'title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'price' => $request->input('price'),
+            'stock' => $request->input('stock'),
+            'url_image' => '',
+            'categorie_id' => $request->input('categorie_id'),
+            'user_id' => '1',
+        ]);
 
-      // $data = $request->only(['title', 'description','price','stock','categorie_id']);
-      // $publication = Publication::create($data);
-      $publication = Publication::create([
-        'title' => $request->input('title'),
-        'description' => $request->input('description'),
-        'price' => $request->input('price'),
-        'stock' => $request->input('stock'),
-        'url_image' => '.images/coser.jpg',
-        'categorie_id' => $request->input('categorie_id'),
-        'user_id' => '1',
-      ]);
-      $publication->save();
+        if ($request->hasFile('cover')){
+            $file = $request->file('cover');
 
-      return view('index');
+            $name = str_slug($publication->title).'-'.$publication->id.'.'.$file->extension();
+
+            $filename = $file->storeAs('images', $name, env('PUBLIC_STORAGE', 'public'));
+
+//            \Storage::disk('public')->putFileAs('images', $file, $name);
+
+            $publication->url_image = $filename;
+        }else{
+            $publication->url_image = "images/no-image.jpg";
+        }
+
+        $publication->save();
+        return redirect('/publication/'.$publication->id);
     }
 }
