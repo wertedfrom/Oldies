@@ -78,11 +78,11 @@
     {{--</div>--}}
     {{--</div>--}}
     <div class="row">
-        <div class="section col-md-10 col-md-offset-1">
+        <div class="section col-sm-10 col-sm-offset-1">
             @foreach($publications as $producto)
                 {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">--}}
                 {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 item">--}}
-                <div class="col-md-3">
+                <div class="col-sm-4 col-md-3">
                     <div class="thumbnail text-center" style="padding-bottom: 10px">
                         <a href="{{url("/publication/$producto->id")}}"><img src="{{asset('storage/'.$producto->url_image)}}" width="300" height="300" alt="{{$producto['title']}}"></a>
                         <h3>{{$producto['title']}}</h3>

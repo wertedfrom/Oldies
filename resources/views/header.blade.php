@@ -1,15 +1,15 @@
 <div class="row" style="margin: 10px 0;">
-    <div class="header col-md-10 col-md-offset-1">
-        <div class="col-md-2">
+    <div class="header col-sm-10 col-sm-offset-1">
+        <div class="col-sm-2">
             {{--<a style="color: rgba(212,99,99,.93)" href="index.php">Oldie's</a>--}}
             <a class="logo" href="/">Oldie's</a>
         </div>
-        <div class="login col-md-5 col-md-offset-5">
+        <div class="login col-sm-5 col-sm-offset-5">
             <div class="row">
                 <div class="text-right">
                     @if (Auth::guest())
-                        <a href="/login">Login</a> |
-                        <a href="/register">Register</a>
+                        <a href="/login">Ingresa</a> |
+                        <a href="/register">Regístrate</a>
                     @else
                         {{--<div class="dropdown">--}}
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

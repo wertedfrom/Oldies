@@ -237,49 +237,49 @@ h4{
 
 }*/
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+/*!* Extra small devices (phones, less than 768px) *!*/
+/*!* No media query since this is the default in Bootstrap *!*/
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .container p, .form-group,button, label,a{
-    font-size: 15px;
-  }
-}
+/*!* Small devices (tablets, 768px and up) *!*/
+/*@media (min-width: 768px) {*/
+  /*.container p, .form-group,button, label,a{*/
+    /*font-size: 15px;*/
+  /*}*/
+/*}*/
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width:992px) {
-  .container h1{
-    font-size: 30px;
-  }
+/*!* Medium devices (desktops, 992px and up) *!*/
+/*@media (min-width:992px) {*/
+  /*.container h1{*/
+    /*font-size: 30px;*/
+  /*}*/
 
-  .container h3{
-    font-size: 20px;
-  }
+  /*.container h3{*/
+    /*font-size: 20px;*/
+  /*}*/
 
-  .container p, .form-group,button, label, .form-control,a{
-    font-size: 17px;
-  }
-}
+  /*.container p, .form-group,button, label, .form-control,a{*/
+    /*font-size: 17px;*/
+  /*}*/
+/*}*/
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .container h1{
-    font-size: 40px;
-  }
+/*!* Large devices (large desktops, 1200px and up) *!*/
+/*@media (min-width: 1200px) {*/
+  /*.container h1{*/
+    /*font-size: 40px;*/
+  /*}*/
 
-  .container h3{
-    font-size: 30px;
-  }
+  /*.container h3{*/
+    /*font-size: 30px;*/
+  /*}*/
 
-  .container .form-group, button, label,a, input{
-    font-size: 15px;
-  }
+  /*.container .form-group, button, label,a, input{*/
+    /*font-size: 15px;*/
+  /*}*/
 
-  .container p, .btn-default{
-    font-size: 17px;
-  }
-}
+  /*.container p, .btn-default{*/
+    /*font-size: 17px;*/
+  /*}*/
+/*}*/
 
 .fileUpload {
   position: relative;

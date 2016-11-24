@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\addPublicationRequest;
 use Illuminate\Http\Request;
 use \App\Publication;
 use \App\Categorie;
+use Illuminate\Support\Facades\Auth;
 
 class PublicationController extends Controller
 {
@@ -25,24 +27,53 @@ class PublicationController extends Controller
 
     // funcion de busqueda de las publicaciones que recibe por el input del buscador
     public function searchPublications(Request $request){
-      $publications = Publication::where(
+      $builder = Publication::where(
         'title',
         'LIKE',
         '%'.$request->input('query').'%'
-        )->get();
+        );
+        $publications=$builder->paginate(8);
         return view('/searchResults',['publications' => $publications]);
     }
 
     // funcion para agregar una publicaciones
     public function add(){
-      $categories = Categorie::all();
-      return view('/addPublication' , ['categories'=> $categories]);
+        if(Auth::user()){
+            $categories = Categorie::all();
+            return view('/addPublication' , ['categories'=> $categories]);
+        }else{
+            return redirect()->action('PublicationController@showBestPublications');
+        }
     }
 
     // funcion que agrega la pelicula a la base de datos pasando por el validador personalizado
-    public function store(Request $request)
+    public function store(addPublicationRequest $request)
     {
-        var_dump($request->input());
+//        var_dump($request->input());
+//
+//
+//        $validation = \Validator::make(
+//            $request->all(),
+//            [
+//                'title' => 'required|max:255',
+//                'description' => 'required|max:500',
+//                'price' => 'required|numeric',
+//                'stock' => 'required|numeric',
+////                'url_image' => 'required|max:255',
+//                'categorie_id' => 'required',
+//                'cover' => 'required',
+//            ]
+//        );
+//
+//        if($validation->fails()){
+////            dd($validation->errors());
+//            return redirect('/publications/add')
+//                ->withInput()
+//                ->withErrors($validation->errors());
+//        }
+//
+//        var_dump($validation->errors());
+
         $publication = Publication::create([
             'title' => $request->input('title'),
             'description' => $request->input('description'),
@@ -50,7 +81,7 @@ class PublicationController extends Controller
             'stock' => $request->input('stock'),
             'url_image' => '',
             'categorie_id' => $request->input('categorie_id'),
-            'user_id' => '1',
+            'user_id' => Auth::id(),
         ]);
 
         if ($request->hasFile('cover')){
@@ -66,6 +97,7 @@ class PublicationController extends Controller
         }else{
             $publication->url_image = "images/no-image.jpg";
         }
+
 
         $publication->save();
         return redirect('/publication/'.$publication->id);

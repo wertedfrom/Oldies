@@ -9,11 +9,11 @@
 @section('content')
     @include('nav-full')
     <div class="row minimo-pub">
-        <div class="section col-md-10 col-md-offset-1">
-            <div class="col-md-6 text-center">
-                <img src="{{asset('storage/'.$producto->url_image)}}" alt="{{$producto['title']}} width="300" height="300"">
+        <div class="section col-sm-10 col-sm-offset-1">
+            <div class="col-sm-4 col-md-6 text-center">
+                <img src="{{asset('storage/'.$producto->url_image)}}" alt="{{$producto['title']}}" width="300" height="300">
             </div>
-            <div class="col-md-5 text-justify">
+            <div class="col-sm-6 col-sm-offset-2 col-md-5 col-md-offset-1 ">
                 <h3>{{$producto->title}}</h3>
                 <p>Publisher: {{$producto->owner['name']}}</p>
                 <p>Category: {{$producto->category['name']}}</p>

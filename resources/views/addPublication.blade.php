@@ -18,13 +18,13 @@
 
                     <div class="col-md-6">
                         <input class="form-control" type="text" name="title" value="{{ old('title') }}" placeholder="Titulo">
-                    </div>
 
-                    @if($errors->has('title'))
-                        @foreach($errors->get('title') as $error)
-                            <div class="text text-danger">{{ $error }}</div>
-                        @endforeach
-                    @endif
+                        @if($errors->has('title'))
+                            @foreach($errors->get('title') as $error)
+                                <div class="text text-danger">{{ $error }}</div>
+                            @endforeach
+                        @endif
+                    </div>
 
                 </div>
 
@@ -32,14 +32,14 @@
 
                     <label for="description" class="col-md-4 control-label">Descripcion: </label>
                     <div class="col-md-6">
-                        <input class="form-control" type="text" size="500" name="description" value="{{ old('descrition') }}" placeholder="description">
-                    </div>
+                        <textarea class="form-control" name="description" placeholder="Descripción">{{old('description')}}</textarea>
 
-                    @if($errors->has('description'))
-                        @foreach($errors->get('description') as $error)
-                            <div class="text text-danger">{{ $error }}</div>
-                        @endforeach
-                    @endif
+                        @if($errors->has('description'))
+                            @foreach($errors->get('description') as $error)
+                                <div class="text text-danger">{{ $error }}</div>
+                            @endforeach
+                        @endif
+                    </div>
 
                 </div>
 
@@ -50,14 +50,13 @@
 
                     <div class="col-md-6">
                         <input class="form-control" type="number" step="any" name="price" value="{{ old('price') }}" placeholder="price">
+
+                        @if($errors->has('price'))
+                            @foreach($errors->get('price') as $error)
+                                <div class="text text-danger">{{ $error }}</div>
+                            @endforeach
+                        @endif
                     </div>
-
-                    @if($errors->has('price'))
-                        @foreach($errors->get('price') as $error)
-                            <div class="text text-danger">{{ $error }}</div>
-                        @endforeach
-                    @endif
-
                 </div>
 
                 <div class="form-group @if($errors->has('stock')) has-error @else @endif">
@@ -65,14 +64,14 @@
                     <label for="stock" class="control-label col-md-4">Stock: </label>
 
                     <div class="col-md-6">
-                        <input class="form-control" type="text" name="stock" value="{{ old('stock') }}" placeholder="Stock">
-                    </div>
+                        <input class="form-control" type="number" name="stock" value="{{ old('stock') }}" placeholder="Stock">
 
-                    @if($errors->has('stock'))
-                        @foreach($errors->get('stock') as $error)
-                            <div class="text text-danger">{{ $error }}</div>
-                        @endforeach
-                    @endif
+                        @if($errors->has('stock'))
+                            @foreach($errors->get('stock') as $error)
+                                <div class="text text-danger">{{ $error }}</div>
+                            @endforeach
+                        @endif
+                    </div>
 
                 </div>
 
@@ -80,6 +79,7 @@
                     <label for="categorie_id" class="col-md-4 control-label">Categoria: </label>
                     <div class="col-md-6">
                         <select class="form-control" name="categorie_id">
+                            <option disabled selected>Seleccione una categoria</option>
                             @foreach($categories as $categorie)
                                 <option value="{{ $categorie->id }}"
                                         @if(old('categorie_id') == $categorie->id) selected
@@ -87,17 +87,18 @@
                                 >{{ $categorie->name }}</option>
                             @endforeach
                         </select>
-                    </div>
 
-                    @if($errors->has('categorie_id'))
-                        @foreach($errors->get('categorie_id') as $error)
-                            <div class="text text-danger">{{ $error }}</div>
-                        @endforeach
-                    @endif
+                        @if($errors->has('categorie_id'))
+                            @foreach($errors->get('categorie_id') as $error)
+                                <div class="text text-danger">{{ $error }}</div>
+                            @endforeach
+                        @endif
+                    </div>
 
                 </div>
 
                 <div class="form-group @if($errors->has('cover')) has-error @else @endif">
+
                     <label class="control-label col-md-4" for="cover">Seleccionar Archivo</label>
                     <div class="col-md-6 text-left">
                         <input value="{{ old('cover') }}" class="form-control" type="file" name="cover" placeholder="Archivo">
@@ -105,18 +106,19 @@
                         {{--<span>Examinar...</span>--}}
                         {{--<input type="file" class="form-control upload name="cover" />--}}
                         {{--</div>--}}
+                        @if($errors->has('cover'))
+                            @foreach($errors->get('cover') as $error)
+                                <span class="text-danger">{{ $error }}</span>
+                            @endforeach
+                        @endif
                     </div>
-                    @if($errors->has('cover'))
-                        @foreach($errors->get('cover') as $error)
-                            <span class="text-danger">{{ $error }}</span>
-                        @endforeach
-                    @endif
-                </div>
 
+                </div>
 
                 <div class="form-group">
                     <div class="col-md-6 col-md-offset-4">
-                        <button type="submit" class="btn btn-primary center-block" style="font-size:20px;">Ingresar</button>
+                        {{--<button type="submit" class="btn btn-primary center-block" style="font-size:20px;">Ingresar</button>--}}
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
                     </div>
                 </div>
             </form>
