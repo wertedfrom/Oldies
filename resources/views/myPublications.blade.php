@@ -29,8 +29,8 @@ Oldie's | My Publications
                 <td style="vertical-align: middle;">{{$publication->stock}}</td>
                 <td style="vertical-align: middle;">{{$publication->price}}</td>
                 <td style="vertical-align: middle;">{{$publication->category->name}}</td>
-                <td style="vertical-align: middle;"><a href="/publications/{{$publication->id}}/edit" class="btn btn-primary">Editar</a></td>
-                <td style="vertical-align: middle;"><a href="/publications/{{$publication->id}}/delete" class="btn btn-primary">Eliminar</a></td>
+                <td style="vertical-align: middle;"><a href="/publications/{{$publication->id}}/edit" class="btn btn-primary">Editar</a>
+                <a href="/publications/{{$publication->id}}/delete" class="btn btn-primary">Eliminar</a></td>
             </tr>
             @empty
             <tr>

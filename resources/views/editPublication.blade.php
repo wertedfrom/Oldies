@@ -102,7 +102,7 @@
 
                         <div class="form-group @if($errors->has('cover')) has-error @else @endif">
 
-                            <label class="control-label col-md-4" for="cover">Seleccionar Archivo</label>
+                            <label class="control-label col-md-4" for="cover">Cambiar portada: </label>
                             <div class="col-md-6 text-left">
                                 <input value="{{ old('cover') }}" class="form-control" type="file" name="cover" placeholder="Archivo">
                                 {{--<div class="fileUpload btn btn-success" style="margin-left:0; width:100%;">--}}
