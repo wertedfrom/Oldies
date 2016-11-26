@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\addPublicationRequest;
+use App\Http\Requests\editPublicationRequest;
 use Illuminate\Http\Request;
 use \App\Publication;
 use \App\Categorie;
@@ -17,7 +18,7 @@ class PublicationController extends Controller
 
     public function showPublication($id){
         $publication = Publication::find($id);
-        return view('/publication',['producto' => $publication]);
+        return view('/publication',['publication' => $publication]);
     }
 
     public function showBestPublications(){
@@ -38,15 +39,11 @@ class PublicationController extends Controller
 
     // funcion para agregar una publicaciones
     public function add(){
-        if(Auth::user()){
-            $categories = Categorie::all();
-            return view('/addPublication' , ['categories'=> $categories]);
-        }else{
-            return redirect()->action('PublicationController@showBestPublications');
-        }
+        $categories = Categorie::all();
+        return view('/addPublication' , ['categories'=> $categories]);
     }
 
-    // funcion que agrega la pelicula a la base de datos pasando por el validador personalizado
+    // funcion que agrega la publicación a la base de datos pasando por el request validador
     public function store(addPublicationRequest $request)
     {
 //        var_dump($request->input());
@@ -102,4 +99,53 @@ class PublicationController extends Controller
         $publication->save();
         return redirect('/publication/'.$publication->id);
     }
+    public function edit($id){
+        $categories = Categorie::all();
+        $publication = Publication::find($id);
+//        return view('/editPublication' , ['id' => $id],['categories'=> $categories],['publication' => $publication]);
+        return view('/editPublication',['publication' => $publication,'categories' => $categories]);
+    }
+
+    public function update($id, editPublicationRequest $request){
+
+        $publication = Publication::find($id);
+        $publication->title = $request->input('title');
+        $publication->description = $request->input('description');
+        $publication->price = $request->input('price');
+        $publication->stock = $request->input('stock');
+        $publication->categorie_id = $request->input('categorie_id');
+
+        if ($request->hasFile('cover')){
+            $file = $request->file('cover');
+
+            $name = str_slug($publication->title).'-'.$publication->id.'.'.$file->extension();
+
+            $filename = $file->storeAs('images', $name, env('PUBLIC_STORAGE', 'public'));
+
+            $publication->url_image = $filename;
+        }
+
+        $publication->save();
+        return redirect('/publication/'.$publication->id);
+    }
+
+    public function getMyPublications(){
+        $builder = Publication::where('user_id',Auth::id())->orderBy('created_at','desc');
+        $publications = $builder->paginate(7);
+        return view('myPublications',['publications'=>$publications]);
+    }
+
+    public function searchInMyPublications(Request $request){
+        $builder = Publication::where('user_id',Auth::id())
+            ->where('title','LIKE','%'.$request->input('query').'%');
+        $publications = $builder->paginate(7);
+        return view('myPublications',['publications'=>$publications]);
+    }
+
+    public function delete($id){
+        $publication = Publication::find($id);
+        $publication->delete();
+        return redirect()->action('PublicationController@getMyPublications');
+    }
+
 }

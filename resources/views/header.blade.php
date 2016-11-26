@@ -13,7 +13,7 @@
                     @else
                         {{--<div class="dropdown">--}}
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  {{ Auth::user()->name }}
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="{{ url("/profile") }}">{{ Auth::user()->name }}</a>
                         </a> |
                         <a href="{{ url('/logout') }}"
                            onclick="event.preventDefault();
@@ -28,21 +28,21 @@
                     @endif
                 </div>
             </div>
-{{--            @if(Route::current()->getName() !== 'login')--}}
-                <div class="row">
-                    <div class="searcher" style="margin-top: 5px;">
-                        <form id="searcher" action="/search" method="GET">
-                            <div class="input-group">
-                                {{ csrf_field() }}
-                                <input type="text" class="form-control box-shadow" name="query">
-                                <span class="input-group-btn">
+            {{--            @if(Route::current()->getName() !== 'login')--}}
+            <div class="row">
+                <div class="searcher" style="margin-top: 5px;">
+                    <form id="searcher" action="/search" method="GET">
+                        <div class="input-group">
+                            {{ csrf_field() }}
+                            <input type="text" class="form-control box-shadow" name="query">
+                            <span class="input-group-btn">
                         <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                     </span>
-                            </div>
-                        </form>
+                        </div>
+                    </form>
 
-                    </div>
                 </div>
+            </div>
             {{--@endif--}}
         </div>
     </div>

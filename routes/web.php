@@ -19,8 +19,20 @@
 //    return view('index');
 //});
 Route::group(['middleware'=> ['auth']], function(){
-
+    // -- ruta para agregar una publicaciones
+    Route::get('publications/add', 'PublicationController@add');
+    Route::post('publications/store', 'PublicationController@store');
+    Route::get('publications/{id}/edit', 'PublicationController@edit');
+    Route::post('publications/{id}/update', 'PublicationController@update');
+    Route::get('publications/{id}/delete', 'PublicationController@delete');
+    Route::get('myPublications','PublicationController@getMyPublications');
+    Route::get('searchInMyPublications','PublicationController@searchInMyPublications');
 });
+
+Route::get('/profile', function(){
+    return view('profile');
+});
+
 Route::get('/', 'PublicationController@showBestPublications');
 // -- ruta que busca las publicaciones filtradas por mysql
 
@@ -29,9 +41,6 @@ Route::get('/search', 'PublicationController@searchPublications');
 Route::get('/searchResults', function () {
     return view('searchResults');
 });
-// -- ruta para agregar una publicaciones
-Route::get('/publications/add', 'PublicationController@add');
-Route::post('publications/store', 'PublicationController@store');
 
 Route::get('/login', function () {
     return view('login');

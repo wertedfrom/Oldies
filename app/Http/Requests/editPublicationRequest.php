@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class addPublicationRequest extends FormRequest
+class editPublicationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class addPublicationRequest extends FormRequest
      */
     public function authorize()
     {
-        return redirect('/publications/add');
+        return redirect('/publications/update');
     }
 
     /**
@@ -29,7 +29,6 @@ class addPublicationRequest extends FormRequest
             'price' => 'required|numeric|min:0',
             'stock' => 'required|numeric|min:1',
             'categorie_id' => 'required',
-            'cover' => 'required',
         ];
     }
 
@@ -47,7 +46,6 @@ class addPublicationRequest extends FormRequest
             'stock.numeric' => 'Debes ingresar un número',
             'stock.min' => 'El stock debe ser 1 como mínimo',
             'categorie_id.required' => 'Debes seleccionar una categoría',
-            'cover.required' => 'Debes subir un archivo para la portada',
         ];
     }
 }

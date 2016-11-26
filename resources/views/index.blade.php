@@ -45,49 +45,17 @@
 @endsection
 @section('content')
     @include('nav-full')
-    {{--<div class="row">--}}
-    {{--<div class="row">--}}
-    {{--<div class="col-xs-12 visible-xs">--}}
-
-    {{--<div class="navigator col-xs-12 visible-xs">--}}
-    {{--<ul class="nav nav-tabs">--}}
-    {{--<li role="presentation" class="dropdown">--}}
-    {{--<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Categories <span class="caret"></span></a>--}}
-    {{--<ul class="dropdown-menu">--}}
-    {{--<li><a href="#">Destacados</a></li>--}}
-    {{--<li><a href="#">Electro</a></li>--}}
-    {{--<li><a href="#">Muebles</a></li>--}}
-    {{--<li><a href="#">Deco</a></li>--}}
-    {{--<li><a href="#">Juguetes</a></li>--}}
-    {{--</ul>--}}
-    {{--</li>--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--<div class="row">--}}
-    {{--<div class="col-sm-12 col-md-12 col-lg-12 hidden-xs">--}}
-    {{--<div class="navigator col-sm-12 col-md-12 col-lg-12 hidden-xs">--}}
-
-    {{--<ul class="nav nav-tabs">--}}
-    {{--<li role="presentation" class="active"><a href="#">Destacados</a></li>--}}
-    {{--<li role="presentation"><a href="#">Electro</a></li>--}}
-    {{--<li role="presentation"><a href="#">Muebles</a></li>--}}
-    {{--<li role="presentation"><a href="#">Deco</a></li>--}}
-    {{--<li role="presentation"><a href="#">Juguetes</a></li>--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-    {{--</div>--}}
     <div class="row">
         <div class="section col-sm-10 col-sm-offset-1">
-            @foreach($publications as $producto)
+            @foreach($publications as $publication)
                 {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">--}}
                 {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 item">--}}
                 <div class="col-sm-4 col-md-3">
                     <div class="thumbnail text-center" style="padding-bottom: 10px">
-                        <a href="{{url("/publication/$producto->id")}}"><img src="{{asset('storage/'.$producto->url_image)}}" width="300" height="300" alt="{{$producto['title']}}"></a>
-                        <h3>{{$producto['title']}}</h3>
-                        <h4>$ {{$producto['price']}}</h4>
-                        <a href="{{url("/publication/$producto->id")}}" class="btn btn-primary" role="button">Ver detalle</a>
+                        <a href="{{url("/publication/$publication->id")}}"><img src="{{asset('storage/'.$publication->url_image)}}" width="300" height="300" alt="{{$publication['title']}}"></a>
+                        <h3>{{$publication['title']}}</h3>
+                        <h4>$ {{$publication['price']}}</h4>
+                        <a href="{{url("/publication/$publication->id")}}" class="btn btn-primary" role="button">Ver detalle</a>
                     </div>
                 </div>
             @endforeach
