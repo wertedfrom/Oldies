@@ -18,7 +18,9 @@
 //Route::get('/', function () {
 //    return view('index');
 //});
+Route::group(['middleware'=> ['auth']], function(){
 
+});
 Route::get('/', 'PublicationController@showBestPublications');
 // -- ruta que busca las publicaciones filtradas por mysql
 
