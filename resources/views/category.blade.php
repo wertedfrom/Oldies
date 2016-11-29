@@ -12,7 +12,7 @@
                 <div class="col-md-3">
                     <div class="thumbnail text-center" style="padding-bottom: 10px">
                         <a href="{{url("/publication/$publication->id")}}"><img src="{{asset('storage/'.$publication->url_image)}}" width="300" height="300" alt="{{$publication['title']}}"></a>
-                            <h3>{{$publication['title']}}</h3>
+                            <h3 class="title">{{$publication['title']}}</h3>
                             <h4>$ {{$publication['price']}}</h4>
                         <a href="{{url("/publication/$publication->id")}}" class="btn btn-primary" role="button">Ver detalle</a>
                     </div>
