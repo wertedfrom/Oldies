@@ -11,53 +11,169 @@ class PublicationsSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker\Factory::create();
         DB::table('publications')->insert(
             [
                 [
                     'title' => 'Bicicleta Antigua',
-                    'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                    'price' => 850.00,
-                    'stock' => 1,
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
                     'url_image' => 'images/bici.jpg',
-                    'user_id' => 1,
-                    'categorie_id' => 1
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 1,
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
                 [
                     'title' => 'Camara Fotografica',
-                    'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                    'price' => 1500.00,
-                    'stock' => 1,
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
                     'url_image' => 'images/camara.jpg',
-                    'user_id' => 1,
-                    'categorie_id' => 2
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 2,
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
                 [
                     'title' => 'Camion de Madera',
-                    'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                    'price' => 200.00,
-                    'stock' => 1,
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
                     'url_image' => 'images/camion.jpg',
-                    'user_id' => 1,
-                    'categorie_id' => 5
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 5,
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
                 [
                     'title' => 'Maquina de Coser',
-                    'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                    'price' => 2500.00,
-                    'stock' => 1,
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
                     'url_image' => 'images/coser.jpg',
-                    'user_id' => 1,
-                    'categorie_id' => 4
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 2,
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
                 [
                     'title' => 'Toca Discos',
-                    'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                    'price' => 3500.00,
-                    'stock' => 1,
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
                     'url_image' => 'images/toca discos.jpg',
-                    'user_id' => 1,
-                    'categorie_id' => 3
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 2,
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
+                [
+                    'title' => 'Camara fotográfica antigua',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/camara2.jpg',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 2,
+                    'created_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'title' => 'Toca Discos',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/toca discos.jpg',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 3,
+                    'created_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'title' => 'Reloj Despertador',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/reloj.jpg',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 2,
+                    'created_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'title' => 'Mesa estilo antiguo',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/mesa.jpg',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 3,
+                    'created_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'title' => 'Telefono estilo antiguo',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/telefonos2.jpg',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 2,
+                    'created_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'title' => 'Telefono Era POP',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/telefono1.jpg',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 2,
+                    'created_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'title' => 'Tambo',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/tambo.jpg',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 4,
+                    'created_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'title' => 'Radio estilo años 60',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/radio2.jpg',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 2,
+                    'created_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'title' => 'Maquina de Escribir',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/maquina de escribir.jpg',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 1,
+                    'created_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'title' => 'Máquina Fotográfica Polaroid',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/polaroid.jpg',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 2,
+                    'created_at' => date('Y-m-d H:i:s')
+                ],
+                [
+                    'title' => 'Bicicleta antigua',
+                    'description' => $faker->text(500),
+                    'price' => $faker->randomNumber(4),
+                    'stock' => rand(1,10),
+                    'url_image' => 'images/bici2.png',
+                    'user_id' => rand(1,50),
+                    'categorie_id' => 1,
+                    'created_at' => date('Y-m-d H:i:s')
+                ]
 
             ]
         );

@@ -55,6 +55,23 @@ class RegisterController extends Controller
             'phone' => 'required|max:30',
             'gender' => 'required|max:20',
             'birthdate' => 'required|date',
+        ],[
+            'name.required' => 'No has ingresado tu nombre',
+            'name.max' => 'El nombre ingresado supera el máximo de caracteres permitidos',
+            'email.required' => 'No has ingresado tu email',
+            'email.email' => 'El formato de email ingresado no es valido',
+            'email.max' => 'El email ingresado supera el máximo de caracteres permitidos',
+            'email.unique' => 'Este email ya ha sido registrado',
+            'password.required' => 'No has ingresado la contraseña',
+            'password.min' => 'La contraseña debe tener 6 caracteres como mínimo',
+            'password.confirmed' => 'La confirmación no coincide con la contraseña ingresada',
+            'lastname.required' => 'No has ingresado tu apellido',
+            'phone.required' => 'No has ingresado tu teléfono',
+            'phone.max' => 'El teléfono ingresado supera el máximo de caracteres permitidos',
+            'gender.required' => 'No has elegido tu sexo',
+            'gender.max' => 'El género ingresado supera el máximo de caracteres permitidos',
+            'birthdate.required' => 'No has ingresado tu fecha de nacimiento',
+            'birthdate.date' => 'El formato de la fecha ingresada no es válido'
         ]);
     }
 

@@ -15,9 +15,10 @@
             </div>
             <div class="col-sm-6 col-sm-offset-2 col-md-5 col-md-offset-1 ">
                 <h3>{{$publication->title}}</h3>
-                <p>Publisher: {{$publication->owner['name']}}</p>
+                <p>Publisher: {{$publication->owner['name']." ".$publication->owner['lastname']}}</p>
                 <p>Category: {{$publication->category['name']}}</p>
                 <p>Price: <strong>$ {{$publication['price']}}</strong></p>
+                <p>Stock: <strong>{{$publication['stock']}}</strong></p>
                 <a href="#" class="btn btn-primary" role="button">Comprar</a>
                 <br>
                 <br>
