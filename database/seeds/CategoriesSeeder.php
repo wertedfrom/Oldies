@@ -14,22 +14,28 @@ class CategoriesSeeder extends Seeder
         DB::table('categories')->insert(
             [
                 [
-                    'name' => 'Destacados'
+                    'name' => 'Destacados',
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
                 [
-                    'name' => 'Electro'
+                    'name' => 'Electro',
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
                 [
-                    'name' => 'Muebles'
+                    'name' => 'Muebles',
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
                 [
-                    'name' => 'Deco'
+                    'name' => 'Deco',
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
                 [
-                    'name' => 'Juguetes'
+                    'name' => 'Juguetes',
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
                 [
-                    'name' => 'Grafica'
+                    'name' => 'Grafica',
+                    'created_at' => date('Y-m-d H:i:s')
                 ],
             ]
         );

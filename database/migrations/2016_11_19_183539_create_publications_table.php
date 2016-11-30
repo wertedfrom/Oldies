@@ -20,6 +20,7 @@ class CreatePublicationsTable extends Migration
             $table->string('description',500);
             $table->decimal('price');
             $table->integer('stock')->unsigned();
+            $table->boolean('state')->default(1);
             $table->string('url_image');
             $table->integer('categorie_id')->unsigned();
             $table->integer('user_id')->unsigned();
