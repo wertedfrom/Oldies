@@ -16,7 +16,7 @@ class CreatePublicationsTable extends Migration
         Schema::create('publications', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('title');
+            $table->string('title',50);
             $table->string('description',500);
             $table->decimal('price');
             $table->integer('stock')->unsigned();
