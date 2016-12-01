@@ -214,6 +214,18 @@ p{
 .visible{
   display: none;
 }
+.btn-primary{
+  background-color: black;
+  border-color: black;
+}
+.btn-primary:hover{
+  background-color:rgb(43, 42, 43);
+  border-color: black;
+}
+.ajuste{
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
 /*span{*/
   /*color: red;*/
