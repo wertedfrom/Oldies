@@ -13,7 +13,7 @@
                     @else
                         {{--<div class="dropdown">--}}
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="{{ url("/profile") }}">{{ Auth::user()->name }}</a>
+                               <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="{{ url("/profile") }}">{{ Auth::user()->name }}</a>
                         </a> |
                         <a href="{{ url('/logout') }}"
                            onclick="event.preventDefault();

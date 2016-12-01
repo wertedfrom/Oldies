@@ -14,8 +14,6 @@
                         <img src="{{asset('storage/'.$publication->url_image)}}" alt="{{$publication['title']}}" style="height:300; width:300;">
                         <h3 class="title">{{$publication['title']}}</h3>
                         <h4>$ {{$publication['price']}}</h4>
-                        <a href="{{url("/publication/$publication->id")}}" class="btn btn-primary" role="button">Visitar</a>
-                        <a href="{{url("/publication/$publication->id")}}" class="btn btn-default" role="button">Comprar</a>
                     </div>
                 </div>
             @empty

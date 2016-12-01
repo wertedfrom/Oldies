@@ -11,11 +11,6 @@ use Illuminate\Support\Facades\Auth;
 
 class PublicationController extends Controller
 {
-    public function listByCategory($id){
-        $publications = Publication::where('categorie_id',$id);
-        return view('/category',['publications' => $publications]);
-    }
-
     public function showPublication($id){
         $publication = Publication::find($id);
         return view('/publication',['publication' => $publication]);

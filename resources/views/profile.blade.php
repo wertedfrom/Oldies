@@ -11,17 +11,22 @@
     <div class="row minimo-pub">
         <div class="section col-sm-10 col-sm-offset-1">
             <div class="col-sm-4 col-md-6 text-center">
-                <img src="{{asset('storage/'.'images/no-image.jpg')}}" width="300" height="300">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="{{asset('storage/'.'images/no-image.jpg')}}" width="300" height="300">
+                    </div>
+                    <div class="col-sm-12">
+                        <a href="#" class="btn btn-primary">Cambiar foto de perfil</a>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-6 col-sm-offset-2 col-md-5 col-md-offset-1 ">
-                <h3>{{Auth::user()->id}}</h3>
-                <p>Publisher: {{Auth::user()->name}}</p>
-                {{--<p>Category: {{$producto->category['name']}}</p>--}}
-                {{--<p>Price: <strong>$ {{$producto['price']}}</strong></p>--}}
-                {{--<a href="#" class="btn btn-primary" role="button">Comprar</a>--}}
-                {{--<br>--}}
-                {{--<br>--}}
-                {{--<p style="word-wrap: break-word;">{{$producto['description']}}</p>--}}
+                <h3>{{Auth::user()->name." ".Auth::user()->lastname}}</h3>
+                <p>Email: <strong>{{Auth::user()->email}}</strong></p>
+                <p>Teléfono: {{Auth::user()->phone}}</p>
+                <p>Sexo: {{Auth::user()->gender}}</p>
+                <p>Fecha de nacimiento: {{Auth::user()->birthdate}}</p>
+                <a href="#" class="btn btn-primary">Editar información de perfil</a>
             </div>
         </div>
     </div>

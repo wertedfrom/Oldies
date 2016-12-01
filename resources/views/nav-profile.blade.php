@@ -30,7 +30,7 @@ $navTabs= [
     <div class="col-xs-12 visible-xs">
         <ul class="nav nav-tabs nav-justified">
             <li role="presentation" class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true" style="font-family: 'Lobster', cursive; font-size: 20px;">Categories <span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true" style="font-family: 'Lobster', cursive; font-size: 20px; background-color: black; color: white;"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
                     <ul class="dropdown-menu" style="min-width: 100%;">
                               @foreach($navTabs as $navTab)
                                 <li class="text-center" style="font-family: 'Lobster', cursive; font-size: 20px, min-width: 100%;";"><a href="{{url($navTab['link'])}}">{{$navTab['name']}}</a></li>
