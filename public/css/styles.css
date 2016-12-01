@@ -214,6 +214,9 @@ p{
 .visible{
   display: none;
 }
+
+/* aca redefinimos el color del boton primary de azul a negro*/
+
 .btn-primary{
   background-color: black;
   border-color: black;
@@ -225,6 +228,22 @@ p{
 .ajuste{
   padding-left: 5px;
   padding-right: 5px;
+}
+
+/* a partir de este punto redefinimos los colores del paginator*/
+.pagination li a{
+  color: black;
+}
+.pagination li a:hover{
+  color: rgb(41, 41, 41);
+}
+.pagination .active span{
+  background: black;
+  border-color: black;
+}
+.pagination .active span:hover{
+  background: rgb(41, 41, 41);
+  border-color: black;
 }
 
 /*span{*/
