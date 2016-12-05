@@ -30,8 +30,8 @@ Oldie's | My Publications
                 <td style="vertical-align: middle;">{{$publication->price}}</td>
                 <td style="vertical-align: middle;">{{$publication->category->name}}</td>
                 <td style="vertical-align: middle;"><a href="/publications/{{$publication->id}}/edit" class="btn btn-primary">Editar</a>
-                  <button data-toggle="modal" data-target="#miVentana" class="btn btn-primary btn-large">Eliminar</button>
-                    <div id="miVentana" class="modal fade" style="display:none" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <button data-toggle="modal" data-target="#miVentana{{$publication->id}}" class="btn btn-primary btn-large">Eliminar</button>
+                    <div id="miVentana{{$publication->id}}" class="modal fade" style="display:none" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <!-- <div class="modal-header">
@@ -53,6 +53,7 @@ Oldie's | My Publications
                   </div>
                 </div>
                 <!-- <a href="/publications/{{$publication->id}}/delete" class="btn btn-primary">Eliminar</a></td> -->
+                </td>
             </tr>
             @empty
             <tr>
