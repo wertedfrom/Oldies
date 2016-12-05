@@ -9,9 +9,9 @@
             @forelse($publications as $publication)
                 {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">--}}
                 {{--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 item">--}}
-                <div class="col-xs-6 col-sm-4 col-md-3 ajuste">
+                <div class="col-xs-12 col-sm-4 col-md-3 ajuste">
                     <div class="thumbnail text-center" style="padding-bottom: 10px">
-                        <a href="{{url("/publication/$publication->id")}}"><img src="{{asset('storage/'.$publication->url_image)}}" width="300" height="300" alt="{{$publication['title']}}"></a>
+                        <a href="{{url("/publication/$publication->id")}}"><img src="{{asset('storage/'.$publication->url_image)}}" alt="{{$publication['title']}}" style="height:210px;"></a>
                         <h3 class="title">{{$publication['title']}}</h3>
                         <h4>$ {{$publication['price']}}</h4>
                         <a href="{{url("/publication/$publication->id")}}" class="btn btn-primary" role="button">Ver detalle</a>
