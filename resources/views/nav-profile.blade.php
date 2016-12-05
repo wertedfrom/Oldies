@@ -2,7 +2,7 @@
 $navTabs= [
         [
                 'name' => 'Perfil',
-                'link' => 'profileDetails'
+                'link' => 'profile'
         ],
         [
                 'name' => 'Mis Publicaciones',

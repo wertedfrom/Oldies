@@ -26,7 +26,7 @@
                 <p>Teléfono: {{Auth::user()->phone}}</p>
                 <p>Sexo: {{Auth::user()->gender}}</p>
                 <p>Fecha de nacimiento: {{Auth::user()->birthdate}}</p>
-                <a href="#" class="btn btn-primary">Editar información de perfil</a>
+                <a href="{{url('editProfile')}}" class="btn btn-primary">Editar información de perfil</a>
             </div>
         </div>
     </div>

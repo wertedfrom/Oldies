@@ -27,6 +27,8 @@ Route::group(['middleware'=> ['auth']], function(){
     Route::get('publications/{id}/delete', 'PublicationController@delete');
     Route::get('myPublications','PublicationController@getMyPublications');
     Route::get('searchInMyPublications','PublicationController@searchInMyPublications');
+    Route::get('editProfile','ProfileController@editProfile');
+    Route::post('updateProfile/{id}','ProfileController@updateProfile');
 });
 
 Route::get('/profile', function(){

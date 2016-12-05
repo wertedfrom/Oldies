@@ -1,3 +1,11 @@
+<?php
+if(old('categorie_id')){
+    $new_categorie_id = old('categorie_id');
+}else{
+    $new_categorie_id = $publication->categorie_id;
+}
+?>
+
 @extends('layouts.mainLayout')
 @section('title')
     Oldie's | edit Publication
@@ -84,8 +92,8 @@
                                 <select class="form-control" name="categorie_id">
                                     @foreach($categories as $categorie)
                                         <option value="{{ $categorie->id }}"
-                                                @if(old('categorie_id') == $categorie->id) selected
-                                                @elseif($categorie->id == $publication->categorie_id) selected
+                                                @if($new_categorie_id == $categorie->id) selected
+{{--                                                @elseif($categorie->id == $publication->categorie_id) selected--}}
                                                 @endif
                                         >{{ $categorie->name }}</option>
                                     @endforeach
