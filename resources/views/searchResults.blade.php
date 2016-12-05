@@ -23,10 +23,10 @@
                 </div>
             @endforelse
         </div>
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
             {{$publications->appends(request()->all())->links()}}
-            </div>
         </div>
     </div>
 @endsection

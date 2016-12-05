@@ -129,7 +129,7 @@ if(old('categorie_id')){
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 {{--<button type="submit" class="btn btn-primary center-block" style="font-size:20px;">Ingresar</button>--}}
-                                <button type="submit" class="btn btn-primary">Ingresar</button>
+                                <button type="submit" class="btn btn-primary">Editar Publicacion</button>
                             </div>
                         </div>
                     </form>

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use \App\Publication;
 use \App\Categorie;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class PublicationController extends Controller
 {
@@ -111,6 +112,9 @@ class PublicationController extends Controller
         $publication->categorie_id = $request->input('categorie_id');
 
         if ($request->hasFile('cover')){
+
+            Storage::delete('public/'.$publication->url_image);
+
             $file = $request->file('cover');
 
             $name = str_slug($publication->title).'-'.$publication->id.'.'.$file->extension();

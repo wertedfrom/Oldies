@@ -1,8 +1,5 @@
 <?php
 $genders = ["Masculino", "Femenino", "Trans", "Otro"];
-var_dump($genders);
-var_dump(old('gender'));
-var_dump($user->gender);
 if(old('gender')){
     $new_gender = old('gender');
 }else{
