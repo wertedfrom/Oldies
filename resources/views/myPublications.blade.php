@@ -30,7 +30,29 @@ Oldie's | My Publications
                 <td style="vertical-align: middle;">{{$publication->price}}</td>
                 <td style="vertical-align: middle;">{{$publication->category->name}}</td>
                 <td style="vertical-align: middle;"><a href="/publications/{{$publication->id}}/edit" class="btn btn-primary">Editar</a>
-                <a href="/publications/{{$publication->id}}/delete" class="btn btn-primary">Eliminar</a></td>
+                  <button data-toggle="modal" data-target="#miVentana" class="btn btn-primary btn-large">Eliminar</button>
+                    <div id="miVentana" class="modal fade" style="display:none" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <!-- <div class="modal-header">
+                          <a data-dismiss="modal" class="close">x</a>
+                          <h3>Cabecera</h3>
+                        </div> -->
+                        <div class="modal-body">
+                          <a data-dismiss="modal" class="close">x</a>
+                          <h4>Estas seguro de eleminar la publicacion?</h4>
+                          <!-- <p>
+                          Estas seguro de eleminar la publicacion?
+                        </p> -->
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn">Cancelar</a>
+                        <a href="/publications/{{$publication->id}}/delete" class="btn btn-primary">Eliminar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <a href="/publications/{{$publication->id}}/delete" class="btn btn-primary">Eliminar</a></td> -->
             </tr>
             @empty
             <tr>

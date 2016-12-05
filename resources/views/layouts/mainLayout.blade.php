@@ -31,6 +31,7 @@
     {{--@include('footer')--}}
     @include('footer')
 </div>
+<script src="https://code.jquery.com/jquery.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
