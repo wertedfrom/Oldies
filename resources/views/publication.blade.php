@@ -15,9 +15,9 @@
             </div>
             <div class="col-sm-6 col-md-6 col-md-offset-1 ">
                 <h3>{{$publication->title}}</h3>
-                <p>Publisher: {{$publication->owner['name']." ".$publication->owner['lastname']}}</p>
-                <p>Category: {{$publication->category['name']}}</p>
-                <p>Price: <strong>$ {{$publication['price']}}</strong></p>
+                <p>Vendedor: {{$publication->owner['name']." ".$publication->owner['lastname']}}</p>
+                <p>Categoría: {{$publication->category['name']}}</p>
+                <p>Precio: <strong>$ {{$publication['price']}}</strong></p>
                 <p>Stock: <strong>{{$publication['stock']}}</strong></p>
                 <input style="width: 50px" type="number" name="quantity" value="1" max="{{$publication['stock']}}" min="1">
                 <a href="#" class="btn btn-primary" role="button">Agregar al Carrito</a>
