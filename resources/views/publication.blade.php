@@ -19,18 +19,23 @@
                 <p>Categoría: {{$publication->category['name']}}</p>
                 <p>Precio: <strong>$ {{$publication['price']}}</strong></p>
                 <p>Stock: <strong>{{$publication['stock']}}</strong></p>
-                <form action="{{route('cart-add',$publication->id)}}" method="post">
-                    {{csrf_field()}}
-                <input style="width: 50px" type="number" name="quantity" value="1" max="{{$publication['stock']}}" min="1">
+                @if(Auth::user())
+                    <form action="{{route('cart-add',$publication->id)}}" method="post">
+                        {{csrf_field()}}
+                        <input style="width: 50px" type="number" name="quantity" value="1" max="{{$publication['stock']}}" min="1">
 
-                <button class="btn btn-primary submit" role="button">Agregar al Carrito  <span class=" glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
-
-                </form>
+                        <button class="btn btn-primary submit" role="button">Agregar al Carrito  <span class=" glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+                    </form>
+                @else
+                    <form action="{{url('/cart/login/'.$publication->id)}}" method="get">
+                        <button class="btn btn-primary submit" role="button">Ingresar para comprar <span class=" glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+                    </form>
+                @endif
                 <br>
                 <br>
                 <p style="word-wrap: break-word;">{{$publication['description']}}</p>
                 {{--@if(Auth::id()==$publication->user_id)--}}
-                    {{--<a href="/publications/{{$publication['id']}}/edit">Editar</a>--}}
+                {{--<a href="/publications/{{$publication['id']}}/edit">Editar</a>--}}
                 {{--@endif--}}
             </div>
         </div>

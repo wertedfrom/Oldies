@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Publication;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
@@ -64,5 +65,12 @@ class CartController extends Controller
             $total += $item->price * $item->quantity;
         }
         return $total;
+    }
+
+    public function login($id){
+        if (Auth::guest()) {
+            return redirect()->guest('login');
+        }
+        return redirect('/publication/'.$id);
     }
 }
