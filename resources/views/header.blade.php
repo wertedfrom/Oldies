@@ -13,9 +13,9 @@
                     @else
                         {{--<div class="dropdown">--}}
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                               <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="{{ url("/profile") }}">{{ Auth::user()->name }}</a>
-                        </a> |
-                        <a href="{{ url('/logout') }}"
+                            <a href=" {{ route('cart-show') }} "><span class=" glyphicon glyphicon-shopping-cart" aria-hidden="true"></a> |
+                            <a href="{{ url("/profile") }}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{Auth::user()->name}}</a> |
+                            <a href="{{ url('/logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             Logout

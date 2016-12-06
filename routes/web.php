@@ -65,3 +65,24 @@ Route::get('/publication/{id}', 'PublicationController@showPublication');
 Route::get('/faq', function () {
     return view('faq');
 });
+
+
+//Cart
+Route::bind('product',function($id){
+    return App\Publication::where('id',$id)->first();
+});
+
+Route::get('cart/show', [
+    'as' => 'cart-show',
+    'uses' => 'CartController@show'
+]);
+
+Route::post('cart/add/{product}', [
+    'as' => 'cart-add',
+    'uses' => 'CartController@add'
+]);
+
+Route::get('cart/delete/{product}', [
+    'as' => 'cart-delete',
+    'uses' => 'CartController@delete'
+]);
