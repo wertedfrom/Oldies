@@ -29,8 +29,8 @@ Oldie's | My Publications
                 <td style="vertical-align: middle;">{{$publication->stock}}</td>
                 <td style="vertical-align: middle;">{{$publication->price}}</td>
                 <td style="vertical-align: middle;">{{$publication->category->name}}</td>
-                <td style="vertical-align: middle;"><a href="/publications/{{$publication->id}}/edit" class="btn btn-primary">Editar</a>
-                  <button data-toggle="modal" data-target="#miVentana{{$publication->id}}" class="btn btn-primary btn-large">Eliminar</button>
+                <td style="vertical-align: middle;"><a href="/publications/{{$publication->id}}/edit" class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</a>
+                  <button data-toggle="modal" data-target="#miVentana{{$publication->id}}" class="btn btn-primary btn-large"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Eliminar</button>
                     <div id="miVentana{{$publication->id}}" class="modal fade" style="display:none" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -57,7 +57,7 @@ Oldie's | My Publications
             </tr>
             @empty
             <tr>
-                <td colspan="5" class="text-center">No encontró ningun registro</td>
+                <td colspan="5" class="text-center"><h3>No encontró ningun registro</h3></td>
             </tr>
             @endforelse
         </table>
