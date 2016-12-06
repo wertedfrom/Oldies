@@ -40,7 +40,7 @@ Oldie's | My Publications
                         </div> -->
                         <div class="modal-body">
                           <a data-dismiss="modal" class="close">x</a>
-                          <h4>Estas seguro de eleminar la publicacion?</h4>
+                            <span class="glyphicon glyphicon-warning-sign" style="font-size: 60px;" aria-hidden="true"></span><h4>Estas seguro de eliminar la publicación?</h4>
                           <!-- <p>
                           Estas seguro de eleminar la publicacion?
                         </p> -->
