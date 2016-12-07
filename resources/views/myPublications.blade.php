@@ -14,7 +14,7 @@
                     <div class="thumbnail text-center" style="padding-bottom: 10px; margin: 8px;">
                         <div class="row">
                             <div class="col-xs-6">
-                                <img src="{{asset('storage/'.$publication->url_image)}}" alt="{{$publication['title']}}" style="max-height: 120px; margin-top: 20px;">
+                                <img src="{{asset('storage/'.$publication->url_image)}}" alt="{{$publication['title']}}" style="max-height: 120px; max-width:100%; margin-top: 20px;">
                             </div>
                             <div class="col-xs-6">
                                 <p><strong>Título:</strong> <a href="{{url("/publication/$publication->id")}}">{{$publication->title}}</a></p>

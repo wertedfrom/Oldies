@@ -91,6 +91,7 @@ class RegisterController extends Controller
             'phone' => $data['phone'],
             'gender' => $data['gender'],
             'birthdate' => $data['birthdate'],
+            'url_image' => 'avatars/no-image.jpg',
         ]);
     }
 }
