@@ -331,3 +331,22 @@ h4{
   opacity: 0;
   filter: alpha(opacity=0);
 }
+
+ /*carousel*/
+.carousel-caption {
+  width: 25%;
+
+}
+/*.carousel-caption h1{
+  font-size: 150%;
+  margin-bottom: 20%;
+}*/
+/*@media screen and (max-width: 768px){
+  .carousel-inner {
+    width: 150%;
+  }
+  .carousel-caption h1{
+    font-size: 30px;
+    margin-bottom: 5%;
+  }
+}*/
