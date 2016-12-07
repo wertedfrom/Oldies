@@ -46,7 +46,7 @@
 @section('content')
     @include('nav-full')
     <div class="row">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000" >
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="100000" >
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -71,7 +71,7 @@
         <div class="item">
           <img src="images/bici.png" style="width: 100%">
           <div class="carousel-caption">
-      	   <h1></h1>
+      	   <h1>DONDE ESTA LO QUE TE GUSTA</h1>
          </div>
         </div>
       </div>

@@ -341,12 +341,21 @@ h4{
   font-size: 150%;
   margin-bottom: 20%;
 }*/
-/*@media screen and (max-width: 768px){
+@media screen and (max-width: 425px){
   .carousel-inner {
     width: 150%;
   }
-  .carousel-caption h1{
-    font-size: 30px;
-    margin-bottom: 5%;
+  .carousel-inner img{
+    position: relative;
+    left: -10%;
   }
-}*/
+  .carousel-caption {
+    width: 30%;
+    left: 10%;
+
+  }
+  .carousel-caption h1{
+    font-size: 25px;
+    margin-bottom: 10%;
+  }
+}
