@@ -10,22 +10,22 @@
 @section('content')
     @include('nav-profile')
     <div class="row minimo-pub">
-        <div class="section col-sm-10 col-sm-offset-1">
+        <div class="section col-xs-12 col-sm-10 col-sm-offset-1">
             <h1>Cambia tu foto de perfil!</h1>
-            <div class="col-sm-4 col-md-6 text-center">
+            <div class="col-xs-12 col-sm-5 col-md-6 text-center">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <img src="{{asset('storage/'.$user->url_image)}}" width="300" height="300">
+                    <div class="col-xs-12">
+                        <img src="{{asset('storage/'.Auth::user()->url_image)}}" style="width:100%;">
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-0">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-1">
                 <form class="form-horizontal" action="/updateAvatar/{{$user->id}}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                 <div class="form-group @if($errors->has('avatar')) has-error @else @endif">
 
-                    <label class="control-label col-md-4" for="cover">Cambiar avatar: </label>
-                    <div class="col-md-6 text-left">
+                    <label class="control-label col-xs-4" for="cover">Cambiar avatar: </label>
+                    <div class="col-xs-8 text-left">
                         <input value="{{ old('avatar') }}" class="form-control" type="file" name="avatar" placeholder="Archivo">
                         {{--<div class="fileUpload btn btn-success" style="margin-left:0; width:100%;">--}}
                         {{--<span>Examinar...</span>--}}
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="form-group">
-                    <div class="col-md-6 col-md-offset-4">
+                    <div class="col-xs-12 text-center">
                         {{--<button type="submit" class="btn btn-primary center-block" style="font-size:20px;">Ingresar</button>--}}
                         <button type="submit" class="btn btn-primary">Modificar foto de perfil</button>
                     </div>

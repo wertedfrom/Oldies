@@ -11,7 +11,7 @@
     <div class="row minimo-pub">
         <div class="section col-sm-10 col-sm-offset-1">
             <div class="col-sm-6 col-md-5 text-center">
-                <img src="{{asset('storage/'.$publication->url_image)}}" alt="{{$publication['title']}}" width="300px" height="300px">
+                <img src="{{asset('storage/'.$publication->url_image)}}" alt="{{$publication['title']}}" width="250px">
             </div>
             <div class="col-sm-6 col-md-6 col-md-offset-1 ">
                 <h3>{{$publication->title}}</h3>

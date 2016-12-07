@@ -1,8 +1,8 @@
 <div class="row" style="margin-bottom: 15px">
-    <div class="col-xs-4 col-sm-4">
-        <a href="/publications/add" class="btn btn-primary col-xs-12">Crear nueva publicación</a>
+    <div class="col-xs-5 col-sm-4">
+        <a href="/publications/add" class="btn btn-primary col-xs-12">Crear nueva</a>
     </div>
-    <div class="col-xs-8 col-sm-8 searcher">
+    <div class="col-xs-7 col-sm-8 searcher">
         <form id="searcher" action="/searchInMyPublications" method="GET">
             <div class="input-group">
                 {{ csrf_field() }}
