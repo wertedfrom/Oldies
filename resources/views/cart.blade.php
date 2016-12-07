@@ -33,8 +33,8 @@ Cantidad:<br>
                                 </form>
                                 <p class="text-center"><strong>Subtotal: </strong>$ {{number_format(($item->price * $item->quantity),2)}}</p>
                                 <div>
-                                    <button data-toggle="modal" data-target="#miVentana{{$item->id}}" class="btn btn-primary btn-large"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>  Eliminar</button>
-                                    <div id="miVentana{{$item->id}}" class="modal fade" style="display:none" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <button data-toggle="modal" data-target="#miVentanaXS{{$item->id}}" class="btn btn-primary btn-large"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>  Eliminar</button>
+                                    <div id="miVentanaXS{{$item->id}}" class="modal fade" style="display:none" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <!-- <div class="modal-header">

@@ -23,8 +23,8 @@
                                 <p><strong>Categoria:</strong> {{$publication->category->name}}</p>
                                 <div>
                                     <a href="/publications/{{$publication->id}}/edit" class="btn btn-primary" style="margin-top:5px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</a>
-                                    <button data-toggle="modal" data-target="#miVentana{{$publication->id}}" class="btn btn-primary btn-large" style="margin-top: 5px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Eliminar</button>
-                                    <div id="miVentana{{$publication->id}}" class="modal fade" style="display:none" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <button data-toggle="modal" data-target="#miVentanaXS{{$publication->id}}" class="btn btn-primary btn-large" style="margin-top: 5px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Eliminar</button>
+                                    <div id="miVentanaXS{{$publication->id}}" class="modal fade" style="display:none" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <!-- <div class="modal-header">
