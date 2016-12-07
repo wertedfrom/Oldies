@@ -58,21 +58,21 @@
         <div class="carousel-inner">
           <div class="item active">
             <img src="images/auto.png" style="width: 100%">
-            <!-- <div class="carousel-caption">
-      	     <h3>Caption Text1</h3>
-           </div> -->
+            <div class="carousel-caption" >
+      	     <h1>UN ESPACIO DONDE COMPRAR</h1>
+           </div>
          </div>
          <div class="item">
-           <img src="images/bici.png" style="width: 100%">
-           <!-- <div class="carousel-caption">
-      	    <h3>Caption Text2</h3>
-          </div> -->
+           <img src="images/maguina.png" style="width: 100%">
+           <div class="carousel-caption">
+      	    <h1>UN ESPACIO DONDE VENDER</h1>
+          </div>
         </div>
         <div class="item">
-          <img src="images/maguina.png" style="width: 100%">
-          <!-- <div class="carousel-caption">
-      	   <h3>Caption Text3</h3>
-         </div> -->
+          <img src="images/bici.png" style="width: 100%">
+          <div class="carousel-caption">
+      	   <h1></h1>
+         </div>
         </div>
       </div>
 
